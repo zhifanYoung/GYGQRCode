@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eGP-Qd-c6L">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--二维码-->
+        <scene sceneID="esx-wG-aWf">
+            <objects>
+                <viewController id="eGP-Qd-c6L" customClass="GYGQRCode" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Otj-OV-On3"/>
+                        <viewControllerLayoutGuide type="bottom" id="AU6-IQ-kFZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VRh-SD-erA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNE-wD-uHQ" userLabel="containerView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saoyisao_sizhou.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPi-A0-oll">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saoyisao_center.png" translatesAutoresizingMaskIntoConstraints="NO" id="MOf-fD-3Oa">
+                                        <rect key="frame" x="38" y="142.5" width="224" height="15"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KPi-A0-oll" secondAttribute="trailing" id="1k9-yj-eiL"/>
+                                    <constraint firstAttribute="height" constant="300" id="66D-9i-1Yw"/>
+                                    <constraint firstAttribute="bottom" secondItem="KPi-A0-oll" secondAttribute="bottom" id="BpS-Yb-RGw"/>
+                                    <constraint firstItem="KPi-A0-oll" firstAttribute="top" secondItem="yNE-wD-uHQ" secondAttribute="top" id="HsT-bF-GTQ"/>
+                                    <constraint firstItem="KPi-A0-oll" firstAttribute="leading" secondItem="yNE-wD-uHQ" secondAttribute="leading" id="Xk7-k0-78N"/>
+                                    <constraint firstAttribute="width" constant="300" id="gjl-b8-QbR"/>
+                                    <constraint firstItem="MOf-fD-3Oa" firstAttribute="centerX" secondItem="yNE-wD-uHQ" secondAttribute="centerX" id="qcm-PL-qEC"/>
+                                    <constraint firstItem="MOf-fD-3Oa" firstAttribute="centerY" secondItem="yNE-wD-uHQ" secondAttribute="centerY" id="ust-rp-xV4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yNE-wD-uHQ" firstAttribute="centerY" secondItem="VRh-SD-erA" secondAttribute="centerY" id="5XM-xI-G6Y"/>
+                            <constraint firstItem="yNE-wD-uHQ" firstAttribute="centerX" secondItem="VRh-SD-erA" secondAttribute="centerX" id="P7D-ea-2bV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码" id="Qn3-8L-Jtc" userLabel="二维码">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Nfb-PK-NMM">
+                            <connections>
+                                <action selector="cameraBtnClicked:" destination="eGP-Qd-c6L" id="60r-LO-Or7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animationImage" destination="MOf-fD-3Oa" id="mUl-PQ-8Mc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvH-ny-XKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="370"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="saoyisao_center.png" width="224" height="15"/>
+        <image name="saoyisao_sizhou.png" width="230" height="230"/>
+    </resources>
+</document>
